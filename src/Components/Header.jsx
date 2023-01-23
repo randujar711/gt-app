@@ -1,4 +1,4 @@
-function Header(){
+function Header({loginData, setLoginData}){
     return(
         <div>
             <div>Menu</div>

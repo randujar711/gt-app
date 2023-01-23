@@ -1,4 +1,4 @@
-function Search() {
+function Search({eventdata, setEventData}) {
     return(
         <div>
             <p>Searchbar and filter</p>
