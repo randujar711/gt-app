@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Home from './Components/Home'
 import Header from './Components/Header'
 import Login from './Components/Login'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import './App.css'
 
 function App() {
@@ -22,9 +23,13 @@ function App() {
     }, [])
   return (
     <div className="App">
-      <Header loginData={loginData} setLoginData={setLoginData}/>
-      <Login loginData={loginData} setLoginData={setLoginData}/>
-      <Home loginData={loginData} setLoginData={setLoginData}/>
+      <BrowserRouter>
+        <Header loginData={loginData} setLoginData={setLoginData}/>
+        <Routes>
+          <Route path={'/'} element={<Home loginData={loginData} setLoginData={setLoginData}/>}/>
+          <Route path={'/login'} element={<Login loginData={loginData} setLoginData={setLoginData}/>}/> 
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
