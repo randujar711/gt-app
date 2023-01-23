@@ -1,3 +1,4 @@
+import { useState } from "react"
 function Events({eventdata, setEventData}){
     const [selEvent, setSelEvent] = useState([])
     const handleEvent = (e) => {
@@ -7,7 +8,7 @@ function Events({eventdata, setEventData}){
     }
     return(
         <div>
-            {
+            {/* {
                 eventdata.map((event)=> {
                     return(
                         <div>
@@ -20,7 +21,7 @@ function Events({eventdata, setEventData}){
                         </div>
                     )
                 })
-            }
+            } */}
         </div>
     )
 }
