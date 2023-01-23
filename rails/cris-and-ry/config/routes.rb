@@ -7,7 +7,11 @@ Rails.application.routes.draw do
 
   get '/hosts', to: 'hosts#index'
   get '/hosts/:id', to: 'hosts#show'
+  post '/hosts', to: 'hosts#create'
+  delete '/hosts/:id', to: 'hosts#destroy'
 
   get '/users', to: 'users#index'
   get '/users/:id', to: 'users#show'
+  post '/users', to: 'users#create'
+  delete '/users/:id', to: 'users#destroy'
 end
